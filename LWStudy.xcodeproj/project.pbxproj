@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3308BF176AC3A35E5E57EFE4 /* Pods_LWStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF0F2EE49B7DE17ECFCEF94 /* Pods_LWStudy.framework */; };
 		91528E8025198A62002AA5BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E7F25198A62002AA5BD /* AppDelegate.m */; };
 		91528E8325198A62002AA5BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E8225198A62002AA5BD /* SceneDelegate.m */; };
 		91528E8625198A62002AA5BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E8525198A62002AA5BD /* ViewController.m */; };
@@ -16,6 +17,18 @@
 		91528E9125198A66002AA5BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E9025198A66002AA5BD /* main.m */; };
 		91528E9B25198A66002AA5BD /* LWStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E9A25198A66002AA5BD /* LWStudyTests.m */; };
 		91528EA625198A66002AA5BD /* LWStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EA525198A66002AA5BD /* LWStudyUITests.m */; };
+		91528EB625198BD6002AA5BD /* NSThreadStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EB525198BD6002AA5BD /* NSThreadStudyController.m */; };
+		91528EB925198ED9002AA5BD /* LWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EB825198ED9002AA5BD /* LWNavigationController.m */; };
+		91528EBC2519931B002AA5BD /* PanReturnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EBB2519931B002AA5BD /* PanReturnController.m */; };
+		91528EBF2519CF62002AA5BD /* GCDStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EBE2519CF62002AA5BD /* GCDStudyController.m */; };
+		91528EC2251A4F2C002AA5BD /* NSOperationStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EC1251A4F2C002AA5BD /* NSOperationStudyController.m */; };
+		91528ECB251B1DD2002AA5BD /* LWOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528ECA251B1DD2002AA5BD /* LWOperation.m */; };
+		91528ED3251B3ACF002AA5BD /* RunLoopStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528ED1251B3ACF002AA5BD /* RunLoopStudyController.m */; };
+		91528ED4251B3ACF002AA5BD /* RunLoopStudyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91528ED2251B3ACF002AA5BD /* RunLoopStudyController.xib */; };
+		91528ED8251B96BF002AA5BD /* NSUrlConnectionStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528ED7251B96BF002AA5BD /* NSUrlConnectionStudyController.m */; };
+		91528EDB251D8E93002AA5BD /* NSURLSessionStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EDA251D8E93002AA5BD /* NSURLSessionStudyController.m */; };
+		91528EDD251D991B002AA5BD /* NSURLSessionStudyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91528EDC251D991B002AA5BD /* NSURLSessionStudyController.xib */; };
+		91528EE0251DF9FD002AA5BD /* AFNStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528EDF251DF9FD002AA5BD /* AFNStudyController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A3EBDEE773C4F6607C684A8 /* Pods-LWStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWStudy.release.xcconfig"; path = "Target Support Files/Pods-LWStudy/Pods-LWStudy.release.xcconfig"; sourceTree = "<group>"; };
+		868C7FD74AF94DDAC58FFD7D /* Pods-LWStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWStudy.debug.xcconfig"; path = "Target Support Files/Pods-LWStudy/Pods-LWStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		8DF0F2EE49B7DE17ECFCEF94 /* Pods_LWStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91528E7B25198A62002AA5BD /* LWStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91528E7E25198A62002AA5BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		91528E7F25198A62002AA5BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +70,28 @@
 		91528EA125198A66002AA5BD /* LWStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91528EA525198A66002AA5BD /* LWStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWStudyUITests.m; sourceTree = "<group>"; };
 		91528EA725198A66002AA5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91528EB425198BD6002AA5BD /* NSThreadStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSThreadStudyController.h; sourceTree = "<group>"; };
+		91528EB525198BD6002AA5BD /* NSThreadStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSThreadStudyController.m; sourceTree = "<group>"; };
+		91528EB725198ED9002AA5BD /* LWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWNavigationController.h; sourceTree = "<group>"; };
+		91528EB825198ED9002AA5BD /* LWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWNavigationController.m; sourceTree = "<group>"; };
+		91528EBA2519931B002AA5BD /* PanReturnController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanReturnController.h; sourceTree = "<group>"; };
+		91528EBB2519931B002AA5BD /* PanReturnController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanReturnController.m; sourceTree = "<group>"; };
+		91528EBD2519CF62002AA5BD /* GCDStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDStudyController.h; sourceTree = "<group>"; };
+		91528EBE2519CF62002AA5BD /* GCDStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDStudyController.m; sourceTree = "<group>"; };
+		91528EC0251A4F2C002AA5BD /* NSOperationStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationStudyController.h; sourceTree = "<group>"; };
+		91528EC1251A4F2C002AA5BD /* NSOperationStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationStudyController.m; sourceTree = "<group>"; };
+		91528EC9251B1DD2002AA5BD /* LWOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWOperation.h; sourceTree = "<group>"; };
+		91528ECA251B1DD2002AA5BD /* LWOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWOperation.m; sourceTree = "<group>"; };
+		91528ED0251B3ACF002AA5BD /* RunLoopStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopStudyController.h; sourceTree = "<group>"; };
+		91528ED1251B3ACF002AA5BD /* RunLoopStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopStudyController.m; sourceTree = "<group>"; };
+		91528ED2251B3ACF002AA5BD /* RunLoopStudyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunLoopStudyController.xib; sourceTree = "<group>"; };
+		91528ED6251B96BF002AA5BD /* NSUrlConnectionStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUrlConnectionStudyController.h; sourceTree = "<group>"; };
+		91528ED7251B96BF002AA5BD /* NSUrlConnectionStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUrlConnectionStudyController.m; sourceTree = "<group>"; };
+		91528ED9251D8E93002AA5BD /* NSURLSessionStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionStudyController.h; sourceTree = "<group>"; };
+		91528EDA251D8E93002AA5BD /* NSURLSessionStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionStudyController.m; sourceTree = "<group>"; };
+		91528EDC251D991B002AA5BD /* NSURLSessionStudyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSURLSessionStudyController.xib; sourceTree = "<group>"; };
+		91528EDE251DF9FD002AA5BD /* AFNStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNStudyController.h; sourceTree = "<group>"; };
+		91528EDF251DF9FD002AA5BD /* AFNStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNStudyController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3308BF176AC3A35E5E57EFE4 /* Pods_LWStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DAEEAAAD96207F71699FDA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DF0F2EE49B7DE17ECFCEF94 /* Pods_LWStudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91528E7225198A62002AA5BD = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +135,8 @@
 				91528E9925198A66002AA5BD /* LWStudyTests */,
 				91528EA425198A66002AA5BD /* LWStudyUITests */,
 				91528E7C25198A62002AA5BD /* Products */,
+				CB0A01D46742A0E37B1AFEEF /* Pods */,
+				3DAEEAAAD96207F71699FDA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +153,9 @@
 		91528E7D25198A62002AA5BD /* LWStudy */ = {
 			isa = PBXGroup;
 			children = (
+				91528ED5251B9676002AA5BD /* 网络学习 */,
+				91528ECC251B39A1002AA5BD /* RunLoopStudy */,
+				91528EB325198BA8002AA5BD /* ThreadStudy */,
 				91528E7E25198A62002AA5BD /* AppDelegate.h */,
 				91528E7F25198A62002AA5BD /* AppDelegate.m */,
 				91528E8125198A62002AA5BD /* SceneDelegate.h */,
@@ -115,6 +167,10 @@
 				91528E8C25198A66002AA5BD /* LaunchScreen.storyboard */,
 				91528E8F25198A66002AA5BD /* Info.plist */,
 				91528E9025198A66002AA5BD /* main.m */,
+				91528EB725198ED9002AA5BD /* LWNavigationController.h */,
+				91528EB825198ED9002AA5BD /* LWNavigationController.m */,
+				91528EBA2519931B002AA5BD /* PanReturnController.h */,
+				91528EBB2519931B002AA5BD /* PanReturnController.m */,
 			);
 			path = LWStudy;
 			sourceTree = "<group>";
@@ -137,6 +193,54 @@
 			path = LWStudyUITests;
 			sourceTree = "<group>";
 		};
+		91528EB325198BA8002AA5BD /* ThreadStudy */ = {
+			isa = PBXGroup;
+			children = (
+				91528EB425198BD6002AA5BD /* NSThreadStudyController.h */,
+				91528EB525198BD6002AA5BD /* NSThreadStudyController.m */,
+				91528EBD2519CF62002AA5BD /* GCDStudyController.h */,
+				91528EBE2519CF62002AA5BD /* GCDStudyController.m */,
+				91528EC0251A4F2C002AA5BD /* NSOperationStudyController.h */,
+				91528EC1251A4F2C002AA5BD /* NSOperationStudyController.m */,
+				91528EC9251B1DD2002AA5BD /* LWOperation.h */,
+				91528ECA251B1DD2002AA5BD /* LWOperation.m */,
+			);
+			path = ThreadStudy;
+			sourceTree = "<group>";
+		};
+		91528ECC251B39A1002AA5BD /* RunLoopStudy */ = {
+			isa = PBXGroup;
+			children = (
+				91528ED0251B3ACF002AA5BD /* RunLoopStudyController.h */,
+				91528ED1251B3ACF002AA5BD /* RunLoopStudyController.m */,
+				91528ED2251B3ACF002AA5BD /* RunLoopStudyController.xib */,
+			);
+			path = RunLoopStudy;
+			sourceTree = "<group>";
+		};
+		91528ED5251B9676002AA5BD /* 网络学习 */ = {
+			isa = PBXGroup;
+			children = (
+				91528ED6251B96BF002AA5BD /* NSUrlConnectionStudyController.h */,
+				91528ED7251B96BF002AA5BD /* NSUrlConnectionStudyController.m */,
+				91528ED9251D8E93002AA5BD /* NSURLSessionStudyController.h */,
+				91528EDA251D8E93002AA5BD /* NSURLSessionStudyController.m */,
+				91528EDC251D991B002AA5BD /* NSURLSessionStudyController.xib */,
+				91528EDE251DF9FD002AA5BD /* AFNStudyController.h */,
+				91528EDF251DF9FD002AA5BD /* AFNStudyController.m */,
+			);
+			path = "网络学习";
+			sourceTree = "<group>";
+		};
+		CB0A01D46742A0E37B1AFEEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				868C7FD74AF94DDAC58FFD7D /* Pods-LWStudy.debug.xcconfig */,
+				6A3EBDEE773C4F6607C684A8 /* Pods-LWStudy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91528EAA25198A66002AA5BD /* Build configuration list for PBXNativeTarget "LWStudy" */;
 			buildPhases = (
+				CB4D9C7B0857FFD6B5F106E1 /* [CP] Check Pods Manifest.lock */,
 				91528E7725198A62002AA5BD /* Sources */,
 				91528E7825198A62002AA5BD /* Frameworks */,
 				91528E7925198A62002AA5BD /* Resources */,
+				E155F5FE556DCDD082E1291B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91528E8E25198A66002AA5BD /* LaunchScreen.storyboard in Resources */,
+				91528EDD251D991B002AA5BD /* NSURLSessionStudyController.xib in Resources */,
 				91528E8B25198A66002AA5BD /* Assets.xcassets in Resources */,
 				91528E8925198A62002AA5BD /* Main.storyboard in Resources */,
+				91528ED4251B3ACF002AA5BD /* RunLoopStudyController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +370,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CB4D9C7B0857FFD6B5F106E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LWStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E155F5FE556DCDD082E1291B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LWStudy/Pods-LWStudy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LWStudy/Pods-LWStudy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LWStudy/Pods-LWStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91528E7725198A62002AA5BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				91528E8625198A62002AA5BD /* ViewController.m in Sources */,
+				91528EE0251DF9FD002AA5BD /* AFNStudyController.m in Sources */,
+				91528EBC2519931B002AA5BD /* PanReturnController.m in Sources */,
+				91528ED3251B3ACF002AA5BD /* RunLoopStudyController.m in Sources */,
+				91528EBF2519CF62002AA5BD /* GCDStudyController.m in Sources */,
+				91528EDB251D8E93002AA5BD /* NSURLSessionStudyController.m in Sources */,
 				91528E8025198A62002AA5BD /* AppDelegate.m in Sources */,
+				91528EB925198ED9002AA5BD /* LWNavigationController.m in Sources */,
 				91528E9125198A66002AA5BD /* main.m in Sources */,
+				91528EB625198BD6002AA5BD /* NSThreadStudyController.m in Sources */,
+				91528ED8251B96BF002AA5BD /* NSUrlConnectionStudyController.m in Sources */,
+				91528EC2251A4F2C002AA5BD /* NSOperationStudyController.m in Sources */,
+				91528ECB251B1DD2002AA5BD /* LWOperation.m in Sources */,
 				91528E8325198A62002AA5BD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,11 +597,13 @@
 		};
 		91528EAB25198A66002AA5BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868C7FD74AF94DDAC58FFD7D /* Pods-LWStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D78X579YYG;
 				INFOPLIST_FILE = LWStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +616,13 @@
 		};
 		91528EAC25198A66002AA5BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3EBDEE773C4F6607C684A8 /* Pods-LWStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D78X579YYG;
 				INFOPLIST_FILE = LWStudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

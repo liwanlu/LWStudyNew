@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnThread;
+@property (weak, nonatomic) IBOutlet UIButton *btn_return;
 
+- (IBAction)btnCLick:(UIButton *)sender;
 
 @end
 

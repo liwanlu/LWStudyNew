@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "GCDStudyController.h"
+#import "PanReturnController.h"
+#import "NSOperationStudyController.h"
+#import "RunLoopStudyController.h"
+#import "AFNStudyController.h"
 
 @interface ViewController ()
 
@@ -16,8 +21,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title=@"学习";
+//    [_btnThread addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+//     [_btn_return addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 }
 
 
+- (IBAction)btnCLick:(UIButton *)sender {
+    
+    if(sender.tag==1)
+        {
+            NSOperationStudyController *thread=[NSOperationStudyController new];
+              [self.navigationController pushViewController:thread animated:YES];
+        }
+    else if (sender.tag==2)
+        {
+           PanReturnController *thread=[PanReturnController new];
+            [self.navigationController pushViewController:thread animated:YES];
+        }
+    else if(sender.tag==3)
+    {
+        
+        RunLoopStudyController *thread=[RunLoopStudyController new];
+                   [self.navigationController pushViewController:thread animated:YES];
+    }
+    else if(sender.tag==4)
+      {
+          
+          AFNStudyController *thread=[AFNStudyController new];
+                     [self.navigationController pushViewController:thread animated:YES];
+      }
+}
 @end

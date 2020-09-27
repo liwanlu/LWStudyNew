@@ -17,10 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSSetUncaughtExceptionHandler(&saveException);
+    
     return YES;
 }
 
-
+void saveException(NSException *ex)
+{
+    //这里保存错误信息，打开app检查并下次上传
+    NSLog(@"出错了\n%@\n结束",ex.callStackSymbols);
+}
 #pragma mark - UISceneSession lifecycle
 
 
