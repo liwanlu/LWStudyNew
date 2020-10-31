@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3308BF176AC3A35E5E57EFE4 /* Pods_LWStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF0F2EE49B7DE17ECFCEF94 /* Pods_LWStudy.framework */; };
+		91071539253559C200FE98D8 /* NSObject+LWSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 91071538253559C200FE98D8 /* NSObject+LWSQLite.m */; };
+		9107153C253559E200FE98D8 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9107153B253559E200FE98D8 /* TestModel.m */; };
+		913C2E12252323450053A040 /* TestMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E10252323450053A040 /* TestMoveView.m */; };
+		913C2E13252323450053A040 /* TestDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E11252323450053A040 /* TestDrawView.m */; };
+		913C2E16252323BE0053A040 /* DrawStudyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E15252323BE0053A040 /* DrawStudyVC.m */; };
+		913C2E1A252326370053A040 /* DrawStudyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913C2E19252326370053A040 /* DrawStudyVC.xib */; };
+		913C2E1D2523768F0053A040 /* NSObject+TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E1C2523768F0053A040 /* NSObject+TestCategory.m */; };
+		913C2E2125241AC60053A040 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E2025241AC60053A040 /* Person.m */; };
+		913C2E2425241B670053A040 /* RunTimeStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E2325241B670053A040 /* RunTimeStudyController.m */; };
+		913C2E2725241E7A0053A040 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 913C2E2625241E7A0053A040 /* Student.m */; };
+		914F5C3E254BE85C00F5ABE5 /* CDTestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C3C254BE85C00F5ABE5 /* CDTestModel.xcdatamodeld */; };
+		914F5C47254BEB8F00F5ABE5 /* CoreDataTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C46254BEB8F00F5ABE5 /* CoreDataTestController.m */; };
+		914F5C53254BF83100F5ABE5 /* CDPerson+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C51254BF83100F5ABE5 /* CDPerson+CoreDataClass.m */; };
+		914F5C54254BF83100F5ABE5 /* CDPerson+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C52254BF83100F5ABE5 /* CDPerson+CoreDataProperties.m */; };
+		914F5C58254C442C00F5ABE5 /* BlockStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C57254C442C00F5ABE5 /* BlockStudyController.m */; };
+		914F5C5B254C49E800F5ABE5 /* AddTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 914F5C5A254C49E800F5ABE5 /* AddTools.m */; };
 		91528E8025198A62002AA5BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E7F25198A62002AA5BD /* AppDelegate.m */; };
 		91528E8325198A62002AA5BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E8225198A62002AA5BD /* SceneDelegate.m */; };
 		91528E8625198A62002AA5BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91528E8525198A62002AA5BD /* ViewController.m */; };
@@ -52,6 +68,37 @@
 		6A3EBDEE773C4F6607C684A8 /* Pods-LWStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWStudy.release.xcconfig"; path = "Target Support Files/Pods-LWStudy/Pods-LWStudy.release.xcconfig"; sourceTree = "<group>"; };
 		868C7FD74AF94DDAC58FFD7D /* Pods-LWStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWStudy.debug.xcconfig"; path = "Target Support Files/Pods-LWStudy/Pods-LWStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		8DF0F2EE49B7DE17ECFCEF94 /* Pods_LWStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LWStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91071537253559C200FE98D8 /* NSObject+LWSQLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+LWSQLite.h"; sourceTree = "<group>"; };
+		91071538253559C200FE98D8 /* NSObject+LWSQLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LWSQLite.m"; sourceTree = "<group>"; };
+		9107153A253559E200FE98D8 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		9107153B253559E200FE98D8 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		913C2E0E252323450053A040 /* TestMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMoveView.h; sourceTree = "<group>"; };
+		913C2E0F252323450053A040 /* TestDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDrawView.h; sourceTree = "<group>"; };
+		913C2E10252323450053A040 /* TestMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMoveView.m; sourceTree = "<group>"; };
+		913C2E11252323450053A040 /* TestDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDrawView.m; sourceTree = "<group>"; };
+		913C2E14252323BE0053A040 /* DrawStudyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawStudyVC.h; sourceTree = "<group>"; };
+		913C2E15252323BE0053A040 /* DrawStudyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawStudyVC.m; sourceTree = "<group>"; };
+		913C2E19252326370053A040 /* DrawStudyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawStudyVC.xib; sourceTree = "<group>"; };
+		913C2E1B2523768F0053A040 /* NSObject+TestCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TestCategory.h"; sourceTree = "<group>"; };
+		913C2E1C2523768F0053A040 /* NSObject+TestCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TestCategory.m"; sourceTree = "<group>"; };
+		913C2E1F25241AC60053A040 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		913C2E2025241AC60053A040 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		913C2E2225241B670053A040 /* RunTimeStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeStudyController.h; sourceTree = "<group>"; };
+		913C2E2325241B670053A040 /* RunTimeStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeStudyController.m; sourceTree = "<group>"; };
+		913C2E2525241E7A0053A040 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		913C2E2625241E7A0053A040 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		914F5C3D254BE85C00F5ABE5 /* CDTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDTestModel.xcdatamodel; sourceTree = "<group>"; };
+		914F5C45254BEB8F00F5ABE5 /* CoreDataTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTestController.h; sourceTree = "<group>"; };
+		914F5C46254BEB8F00F5ABE5 /* CoreDataTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestController.m; sourceTree = "<group>"; };
+		914F5C4E254BF79300F5ABE5 /* CDTestModelTwo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDTestModelTwo.xcdatamodel; sourceTree = "<group>"; };
+		914F5C4F254BF83100F5ABE5 /* CDPerson+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDPerson+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
+		914F5C50254BF83100F5ABE5 /* CDPerson+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDPerson+CoreDataClass.h"; sourceTree = SOURCE_ROOT; };
+		914F5C51254BF83100F5ABE5 /* CDPerson+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CDPerson+CoreDataClass.m"; sourceTree = SOURCE_ROOT; };
+		914F5C52254BF83100F5ABE5 /* CDPerson+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CDPerson+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
+		914F5C56254C442C00F5ABE5 /* BlockStudyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockStudyController.h; sourceTree = "<group>"; };
+		914F5C57254C442C00F5ABE5 /* BlockStudyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStudyController.m; sourceTree = "<group>"; };
+		914F5C59254C49E800F5ABE5 /* AddTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTools.h; sourceTree = "<group>"; };
+		914F5C5A254C49E800F5ABE5 /* AddTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTools.m; sourceTree = "<group>"; };
 		91528E7B25198A62002AA5BD /* LWStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91528E7E25198A62002AA5BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		91528E7F25198A62002AA5BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +175,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		910715362535596600FE98D8 /* 对象存储数据库分类设计 */ = {
+			isa = PBXGroup;
+			children = (
+				91071537253559C200FE98D8 /* NSObject+LWSQLite.h */,
+				91071538253559C200FE98D8 /* NSObject+LWSQLite.m */,
+				9107153A253559E200FE98D8 /* TestModel.h */,
+				9107153B253559E200FE98D8 /* TestModel.m */,
+			);
+			path = "对象存储数据库分类设计";
+			sourceTree = "<group>";
+		};
+		913C2E0D252322E10053A040 /* 绘画学习 */ = {
+			isa = PBXGroup;
+			children = (
+				913C2E14252323BE0053A040 /* DrawStudyVC.h */,
+				913C2E15252323BE0053A040 /* DrawStudyVC.m */,
+				913C2E0F252323450053A040 /* TestDrawView.h */,
+				913C2E11252323450053A040 /* TestDrawView.m */,
+				913C2E0E252323450053A040 /* TestMoveView.h */,
+				913C2E10252323450053A040 /* TestMoveView.m */,
+				913C2E19252326370053A040 /* DrawStudyVC.xib */,
+			);
+			path = "绘画学习";
+			sourceTree = "<group>";
+		};
+		913C2E1E25241A850053A040 /* Runtime学习 */ = {
+			isa = PBXGroup;
+			children = (
+				913C2E1F25241AC60053A040 /* Person.h */,
+				913C2E2025241AC60053A040 /* Person.m */,
+				913C2E2225241B670053A040 /* RunTimeStudyController.h */,
+				913C2E2325241B670053A040 /* RunTimeStudyController.m */,
+				913C2E2525241E7A0053A040 /* Student.h */,
+				913C2E2625241E7A0053A040 /* Student.m */,
+				913C2E1B2523768F0053A040 /* NSObject+TestCategory.h */,
+				913C2E1C2523768F0053A040 /* NSObject+TestCategory.m */,
+			);
+			path = "Runtime学习";
+			sourceTree = "<group>";
+		};
+		914F5C29254BDD2700F5ABE5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				914F5C4F254BF83100F5ABE5 /* CDPerson+CoreDataProperties.h */,
+				914F5C50254BF83100F5ABE5 /* CDPerson+CoreDataClass.h */,
+				914F5C51254BF83100F5ABE5 /* CDPerson+CoreDataClass.m */,
+				914F5C52254BF83100F5ABE5 /* CDPerson+CoreDataProperties.m */,
+				914F5C3C254BE85C00F5ABE5 /* CDTestModel.xcdatamodeld */,
+				914F5C45254BEB8F00F5ABE5 /* CoreDataTestController.h */,
+				914F5C46254BEB8F00F5ABE5 /* CoreDataTestController.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		914F5C55254C441500F5ABE5 /* Block学习 */ = {
+			isa = PBXGroup;
+			children = (
+				914F5C56254C442C00F5ABE5 /* BlockStudyController.h */,
+				914F5C57254C442C00F5ABE5 /* BlockStudyController.m */,
+				914F5C59254C49E800F5ABE5 /* AddTools.h */,
+				914F5C5A254C49E800F5ABE5 /* AddTools.m */,
+			);
+			path = "Block学习";
+			sourceTree = "<group>";
+		};
 		91528E7225198A62002AA5BD = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +265,11 @@
 		91528E7D25198A62002AA5BD /* LWStudy */ = {
 			isa = PBXGroup;
 			children = (
+				914F5C55254C441500F5ABE5 /* Block学习 */,
+				914F5C29254BDD2700F5ABE5 /* CoreData */,
+				910715362535596600FE98D8 /* 对象存储数据库分类设计 */,
+				913C2E1E25241A850053A040 /* Runtime学习 */,
+				913C2E0D252322E10053A040 /* 绘画学习 */,
 				91528ED5251B9676002AA5BD /* 网络学习 */,
 				91528ECC251B39A1002AA5BD /* RunLoopStudy */,
 				91528EB325198BA8002AA5BD /* ThreadStudy */,
@@ -310,6 +427,7 @@
 				TargetAttributes = {
 					91528E7A25198A62002AA5BD = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					91528E9525198A66002AA5BD = {
 						CreatedOnToolsVersion = 11.6;
@@ -346,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913C2E1A252326370053A040 /* DrawStudyVC.xib in Resources */,
 				91528E8E25198A66002AA5BD /* LaunchScreen.storyboard in Resources */,
 				91528EDD251D991B002AA5BD /* NSURLSessionStudyController.xib in Resources */,
 				91528E8B25198A66002AA5BD /* Assets.xcassets in Resources */,
@@ -417,15 +536,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914F5C54254BF83100F5ABE5 /* CDPerson+CoreDataProperties.m in Sources */,
 				91528E8625198A62002AA5BD /* ViewController.m in Sources */,
+				913C2E2725241E7A0053A040 /* Student.m in Sources */,
 				91528EE0251DF9FD002AA5BD /* AFNStudyController.m in Sources */,
+				9107153C253559E200FE98D8 /* TestModel.m in Sources */,
+				914F5C58254C442C00F5ABE5 /* BlockStudyController.m in Sources */,
+				913C2E2125241AC60053A040 /* Person.m in Sources */,
+				914F5C53254BF83100F5ABE5 /* CDPerson+CoreDataClass.m in Sources */,
+				913C2E13252323450053A040 /* TestDrawView.m in Sources */,
+				913C2E2425241B670053A040 /* RunTimeStudyController.m in Sources */,
+				91071539253559C200FE98D8 /* NSObject+LWSQLite.m in Sources */,
 				91528EBC2519931B002AA5BD /* PanReturnController.m in Sources */,
+				914F5C47254BEB8F00F5ABE5 /* CoreDataTestController.m in Sources */,
 				91528ED3251B3ACF002AA5BD /* RunLoopStudyController.m in Sources */,
+				913C2E1D2523768F0053A040 /* NSObject+TestCategory.m in Sources */,
 				91528EBF2519CF62002AA5BD /* GCDStudyController.m in Sources */,
 				91528EDB251D8E93002AA5BD /* NSURLSessionStudyController.m in Sources */,
 				91528E8025198A62002AA5BD /* AppDelegate.m in Sources */,
+				913C2E16252323BE0053A040 /* DrawStudyVC.m in Sources */,
 				91528EB925198ED9002AA5BD /* LWNavigationController.m in Sources */,
+				914F5C3E254BE85C00F5ABE5 /* CDTestModel.xcdatamodeld in Sources */,
 				91528E9125198A66002AA5BD /* main.m in Sources */,
+				913C2E12252323450053A040 /* TestMoveView.m in Sources */,
+				914F5C5B254C49E800F5ABE5 /* AddTools.m in Sources */,
 				91528EB625198BD6002AA5BD /* NSThreadStudyController.m in Sources */,
 				91528ED8251B96BF002AA5BD /* NSUrlConnectionStudyController.m in Sources */,
 				91528EC2251A4F2C002AA5BD /* NSOperationStudyController.m in Sources */,
@@ -519,7 +653,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -578,7 +712,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -600,8 +734,10 @@
 			baseConfigurationReference = 868C7FD74AF94DDAC58FFD7D /* Pods-LWStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D78X579YYG;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = LWStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,6 +746,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = maitui.LWStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -619,8 +758,10 @@
 			baseConfigurationReference = 6A3EBDEE773C4F6607C684A8 /* Pods-LWStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D78X579YYG;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = LWStudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +770,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = maitui.LWStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -749,6 +892,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		914F5C3C254BE85C00F5ABE5 /* CDTestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				914F5C4E254BF79300F5ABE5 /* CDTestModelTwo.xcdatamodel */,
+				914F5C3D254BE85C00F5ABE5 /* CDTestModel.xcdatamodel */,
+			);
+			currentVersion = 914F5C4E254BF79300F5ABE5 /* CDTestModelTwo.xcdatamodel */;
+			path = CDTestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 91528E7325198A62002AA5BD /* Project object */;
 }

@@ -24,6 +24,9 @@ PODS:
   - CocoaLumberjack (3.6.2):
     - CocoaLumberjack/Core (= 3.6.2)
   - CocoaLumberjack/Core (3.6.2)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - KissXML (5.3.1):
     - KissXML/All (= 5.3.1)
   - KissXML/Additions (5.3.1):
@@ -43,6 +46,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
+  - FMDB (~> 2.7.5)
   - XMPPFramework
 
 SPEC REPOS:
@@ -50,6 +54,7 @@ SPEC REPOS:
     - AFNetworking
     - CocoaAsyncSocket
     - CocoaLumberjack
+    - FMDB
     - KissXML
     - libidn
     - XMPPFramework
@@ -58,10 +63,11 @@ SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   KissXML: 5c8e0f2e8b9f071d3e1ae123dec3eb5da615c10c
   libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
   XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
 
-PODFILE CHECKSUM: f559af2d9f6218638d57370428b1b8b4cb29db8e
+PODFILE CHECKSUM: 61ab3226ccee2d62c5d2d479fecc9e729252de81
 
 COCOAPODS: 1.9.3

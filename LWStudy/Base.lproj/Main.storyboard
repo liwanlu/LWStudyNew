@@ -60,11 +60,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT1-Py-bWm">
-                                <rect key="frame" x="25" y="227" width="31" height="30"/>
+                                <rect key="frame" x="26" y="227" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="网络"/>
                                 <connections>
                                     <action selector="btnCLick:" destination="8KT-B6-85v" eventType="touchUpInside" id="Ww0-EJ-ZQI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-f3-tfB">
+                                <rect key="frame" x="28" y="265" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="绘画"/>
+                                <connections>
+                                    <action selector="btnCLick:" destination="8KT-B6-85v" eventType="touchUpInside" id="WCa-9h-bf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcy-78-aRO">
+                                <rect key="frame" x="15" y="303" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="runtime"/>
+                                <connections>
+                                    <action selector="btnCLick:" destination="8KT-B6-85v" eventType="touchUpInside" id="5J1-wG-Hph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-u1-cgU">
+                                <rect key="frame" x="8" y="333" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CoreData"/>
+                                <connections>
+                                    <action selector="btnCLick:" destination="8KT-B6-85v" eventType="touchUpInside" id="Unf-J7-n9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKS-PQ-g5x">
+                                <rect key="frame" x="24" y="370" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Block"/>
+                                <connections>
+                                    <action selector="btnCLick:" destination="8KT-B6-85v" eventType="touchUpInside" id="WNg-5r-Zkg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIs-pD-sLy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="8"/>
+            <point key="canvasLocation" x="288.40579710144931" y="7.3660714285714279"/>
         </scene>
     </scenes>
 </document>
