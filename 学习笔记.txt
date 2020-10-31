@@ -1,0 +1,270 @@
+1:图片加载模式，contentoffile方式把引用清空后，图片就会被回收，imageName方式就不会自动回收，回收时间由系统决定。
+2：导入图片或其他素材时，一个选项表示忽略路径，所有文件都在跟blund下面。另一个表示不忽略路径，使用时必须拼接路径。
+3：imageView可以直接设定一组图片，作为动画效果。叫setAnimationImages之类的。
+
+
+4:scrollview 的contentSize表示内容大小，大小超过scrollView的大小则可以滚动。
+  contentOffSet属性设置滚动的位置，为点。表示左顶点的xy值。contentInset表示内容在scrollView中的四周边距，滚动时能覆盖这个边距。相当于多出来的滚动区域，但是滚动完成，会自动弹回到有边距的状态。
+
+5:scrollView实现缩放，只要在viewForZoomInScrollView中返回里面的某个view，然后设置max和min imunScale就可以实现了。
+
+6:scrollView的pagingEnable属性设为yes的话，就能实现滑动自动分页滚动了。
+
+
+
+
+重点
+
+7：NSRunLoop待学习---0528设置frame一章25分钟讲了怎么动态设置lable的宽高知识，需要回顾。
+
+
+
+
+
+
+8:preferStateBarHide 实现这个方法可以控制顶部状态栏展示隐藏
+
+9:UITableViewCell的accesssoryType和accesssoryView可以快速设置cell右边的内容。
+10：UITableViewCell可以设置backgroundColor，还可以设置backgroundView。传入一个view作为背景（可作为聊天界面气泡背景）。还可以设置selectionBackgroundColor或selectBackgroundView设置选中时的状态。
+
+11：UiTableView的separatorType和separatorColor设置分割线样式和颜色。
+
+12:CGRectGetMaxX或Y可以直接获取最大X或Y值，替代我以前的笨方法。
+
+13：动态cell高的思想:
+数据模型data，frame模型dataFrame（包含data变量）。通过data的数据计算出cell里每个view的frame，然后frame存储在dataFrame中。在界面加载时就计算出错有dataFrame，然后把dataFrame传递给cell的setData方法，cell里设置view的值，view的frame用dataFrame里面的。
+
+
+759
+80
+11.5
+
+``````````````	 
+
+
+
+
+
+
+14: NSIndexPath *indexPath=[NSIndexPath indexPathForRow:i inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+
+执行上面这句，有时会有跳一下的动画，不是我们想要的，需要实现
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{}
+这个方法就可以解决了
+
+
+15:实现uitableview打开就自动滚动到底部的方法，并且不现实滚动动画，类似微信刚打开聊天界面：
+[self.tableView reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(),^{ //由于mainQueue是串行的，执行到这里说明上一个提交到mainQueue的task已经完成了（即tableView重绘）
+        if (self.tableView.contentSize.height >self.tableView.frame.size.height)
+        {
+            [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height -self.tableView.bounds.size.height) animated:NO];
+
+        }
+        
+    });
+
+
+
+
+16:
+        //下面两句解决lab动态高度的时候，高度计算不准的问题
+        _lab_name.preferredMaxLayoutWidth = self.contentView.frame.size.width-8;//头像50，头像左右各10，lab右边10
+        _lab_name.userInteractionEnabled = YES;
+
+
+
+17:make.bottom.equalTo(_view_images); 这句还有一个功效，就是动态设定父容器（_view_images）的高。
+
+
+ 18:设置按钮的内容靠哪边和靠边后的距离       _btn_comment.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
+        [_btn_comment setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 10)];
+
+
+19:关于tableview隐藏键盘
+   _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;//tableview滚动隐藏键盘
+    
+    //下面加入uitableview单击隐藏键盘
+    UITapGestureRecognizer *singleTapGesture = [[UITapGestureRecognizer alloc] init];
+    singleTapGesture.numberOfTapsRequired = 1;
+    singleTapGesture.cancelsTouchesInView = YES;
+    singleTapGesture.delegate=self;
+    [_tableView addGestureRecognizer:singleTapGesture];
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if([tv_commentInput isFirstResponder])
+    {
+        [tv_commentInput resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+
+20:毛玻璃效果
+   UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        [bgImgView sd_setImageWithURL:[NSURL URLWithString:_bgImageUrl] placeholderImage:[UIImage imageNamed:@"avatar0.jpg"]];
+        [self.view addSubview:bgImgView];
+        
+        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, bgImgView.frame.size.width, bgImgView.frame.size.height)];
+        toolbar.barStyle = UIBarStyleBlackTranslucent;
+        [bgImgView addSubview:toolbar];
+
+21:LPDQuoteImagesView 有时按没反应，是因为下面的方法抢了点击事件。这是应该用手势的方法来处理键盘消失。
+//    [scrollView whenTapped:^{
+//        [self.view endEditing:YES];
+//    }];
+
+
+
+22:
+ NSMutableArray *marr = [[NSMutableArray alloc]initWithArray:self.navigationController.viewControllers];
+        [marr removeObject:_needCloseVC];
+        self.navigationController.viewControllers = marr;
+
+上面的方法移除指定的viewController有效
+
+
+
+
+
+//下面的代码做延时执行任务和取消执行
+
+[self performSelector:@selector(boom) withObject:nil afterDelay:4];
+[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(boom) object:nil];
+
+
+
+
+23:uilabel动态宽度并且指定最大宽度实现：
+   _lab_corFullName.numberOfLines=0;
+        _lab_corFullName.preferredMaxLayoutWidth=WIDTH_SCREEN-130;
+        [_lab_corFullName sizeToFit];
+
+24:ios13后设置输入框Placeholder颜色
+
+ _tf_search.attributedPlaceholder = [[NSMutableAttributedString alloc]initWithString:@"请输入商品关键词" attributes:@{NSFontAttributeName:FONTNORMAL(14),NSForegroundColorAttributeName:UIColorFromRGB(0xff999999)}];
+
+
+
+25:根据类名创建对象和传参数
+     NSString *name = @"RegisterController2";
+        Class cls = NSClassFromString(name);
+        if(cls!=nil)
+        {
+            UIViewController *vc = [[cls alloc] init];
+            [vc setValue:@"1111" forKey:@"phoneNumber"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else
+        {
+            NSLog(@"没有这个类");
+        }
+
+
+2020/9/7
+
+26:@property 参数的理解：原子性，有锁和没锁的区别；读写属性，开放读和写的方法区别，setter方法内存管理，直接赋值（assign）还是先release旧值再retain新值（retain）的区别；强弱引用，强引用必须所有拥有者都消失才释放，弱引用为之要强引用消失，不管还有多少弱引用，都直接释放。并且释放时会把各个弱指针设为nil；ARC下使用strong和weak，MRC下使用retain和assign；一半ui控件用weak
+
+27:@Class 类名，可以简单声明一个类，减少编译时间。因为import原理是把.h文件的内容复制到当前文件，用@Class就不会复制，但是。m里面需要使用这个类还需要再次import该类，因为@Class并不知道类的定义。这样做减少编译时间，类内容只有运行时才import加入
+
+两个类互相引用的话，会报错，所以用@Class可以解决
+
+28:两个对象互相引用，即A有B对象，B有A对象，一个用retain，一个用assign可以避免内存泄露；系统内置类比如nsstring等不需要做内存管理。
+
+29:自动释放池的使用：【x autorelease】加入自动释放池，在{}结束后会自动release一次。在类方法里进行初始化（+开头的）：return [[[xxx alloc] init] autorelease] 后，代码结束会自动释放一次，使用过程就不需要在写release了。
+
+
+30:返回值：instancetype是一个万能指针类型，和id类似，但是把id赋值给某个变量时，编译器不提示类型是否相同。会导致执行时报错，而instancetype赋给变量时，如果instancetype所指向的对象和变量类型不一致，会警告。
+
+31:category分类里如果有同名方法，优先执行最后编译的文件的方法，在compile sources里的顺序。分类优先级大于主类。分类之间安编译顺序决定。
+
+32:Extendsion延展类型，可以给类新增变量和方法。但是不提供实现，实现需要在原类的。m文件里实现。
+
+33:block访问外部变量，并不是访问的原来的变量，而是以常量（const）的方式拷贝进去block代码块里面，所以只能访问不能修改。如果想要能修改，需要在外部变量前面加上_block例子：_block int xxx=xxx;这样就以普通变量的方式拷贝进去（和外部的变量依然是不同的内存地址），在内部可修改。并且修改后，再在外部访问原变量，会访问到block里面的变量（重点理解）。
+
+34:全局block，栈block，堆block的区别：
+全局block：定义在方法外部，或定义在内部并且没有引用外部变量的，或者只引用了常量或静态变量的。
+栈block：定义在方法或{}里面，引用了外部变量。{}结束后就会被回收
+堆block：堆栈block进行copy，就复制到了堆block，可以在其他地方使用。
+
+
+35:typedef 方法指针相关的需要再学习一下
+
+36:block也可以作为返回值。先用typedef定义好block的类型，然后就可以定义同结构的block作为返回值了。
+
+
+37:protocol协议：协议也可以遵守一个或多个协议。默认值遵守nsobject（基协议，定义了descript，retain，isequitto，iskindofclass等方法）。之后类只要引入最后的协议，就需要实现所有协议的方法。
+   方法前面可以用@Required和@optainal修饰，表示是否必须实现。还有@publish，@privite等修饰访问权限
+   @protocal xxx 可以想@class一样简单引入一个协议。使用时.m里面需要重新引入
+
+
+38:rangeorstring options 可以传入NSBackwardSearch，从后面开始搜索包含的字符串
+
+39:nsarry遍历有三种方法，我常用的两种+ arry enumerateObjectsUsingBlock：^(xxx,xx,xxx) 的代码块方式遍历，同理nsdictionary也有这个方法来遍历；nsarry还可以直接通过文件读写；nsarry里都是字符串的话，可以用【arry componentsjoinedByString：@“，”】把数组组装成一个字符串，用，连接的。
+
+
+40:NSValue是用来把指针，结构体等包装成对象的类，让这些对象可以存储到本地。例如CGPoint，CGRect等。例如：NSValue *testVal=[NSValue valueWithPoint:point]；下面的语句读取数据 CGPoint *testPoint=[testVal pointValue];
+   自定义的结构体也可以转换，只是写法复杂点，需要用时搜吧。
+
+41:集合内存管理：对象加入集合时会retain+1；移除对象或集合被销毁时，里面的对象会release一次。集合如果是类方法创建的，会自动加入autoreleasepoor，代码结束时会-1，所以不需要显示release，参考29条
+
+
+42：copy对象分为浅拷贝（copy）和深拷贝（mutableCopy），浅拷贝返回的还是当前对象，只是retainCount+1，深拷贝是返回一个全新的对象，新对象retainCount为1，旧对象不变。对象要能被copy，需要实现copy协议。（疑问：进行copy后，集合里面的对象returnCount怎么变化？有空试试）
+
+
+43:ios9新增修饰符：例如nullable，是用来修饰变量，参数，方法的。可以加在@propety（xxx,xxx,nullable）或 nsstring *__nullable name或方法的参数前面，用来表示是否可空的意思，如果没遵守，编译器会警告，修饰符还有（nonnull不可空、nullable可空、null_resettables set方法可空，get不可空、__null_unspecified 不确定的）
+
+-(__kinfof xxx)xxxxxx方法 放在返回值类型前面，表示返回值可以是xxx或xxx的子类
+
+
+
+44:范形：数组，字典，NSSet等可以 NSArry<NSString *> *strs 这样来声明里面的对象类型。这样后续直接把里面的对象当范形对象来用，比如：str[0].length。
+自定义对象也可以定义范型。类声明是在类名后面加上<ObjectType>,在它的变量前面直接用 ObjectType定义，那后续给这个对象传值时就必须传入对于的类型。看代码吧：
+定义类型：
+@interface Person<ObjectType> :NSObject
+
+//语言
+@property (nonatmic,strong) ObjectType language;
+
+@end
+
+使用：(假设已经存在IOS类)
+	Person<IOS *> *p=[Person new];
+	p.language=[IOS new];
+
+逆变协变：ObjectType前面加上修饰符可以表示：
+__covariant(协变):子类转父类，即可以传ObjecType的子类。
+
+__contravariant(逆变):父类转子类，即可以传ObjectType的父类
+
+
+
+45:对象直接用NSDic复制，如果对象的变量和dic的keys定义完全一样，可以用[xxx setValuesForKeysWithDictionary:dic]直接赋值。如果dic里面有对象没定义的变量，可以重写对象的-(void)setValue forUndefineKey方法去特殊处理。
+
+
+46: 内存地址相关：
+int a=10;
+int b=20;
+int *p=&a;//用int *p来定义内存地址变量。p可以存储a的内存地址。
+p=&b;//把b的地址存到p里面
+*p=30；//用*p可以取出p指向的对象，即b，并给b赋值30；
+
+
+47:const常量修饰符，它只修饰它右边的变量，指针类型很特殊：比如：static int *p;表示 *p是只读的，而int * const p，表示p才是只读的。而普通对象，nsstring * const s，int const i，这样定义就行
+
+
+48:static和extern：static定义的静态变量在整个生命周期，任何位置，任何时间都能使用，不论在哪里，什么时候定义的。因为程序一启动就会把所有static变量生成。但是在别的文件中，不知道有这个变量，怎么使用？所以有extern，用来声明一个static变量。类似@Class的作用吧。extern只能声明，不能赋值。extern int a。这样就能使用a这个static变量了。
+
+上面理解错了：
+1:全局变量：定义在文件里面，类外面的。程序结束后才释放，当前代码文件可用。
+2:static静态变量：定义的方法里可用，也是程序结束后才释放。定义在方法外的话，整个代码文件可用。
+3:extern修饰符：只能用来修饰全局变量，可以跨文件访问全局变量。注意点，static不论是定义在方法里，还是定义在方法外，都不能用extern修饰，会报错。
+4:意思是，全局变量：没用static修饰时，那么在其他文件中，我们也可以使用它，只不过要用extern去引用。但是使用了static修饰后，在其他文件中是不可以使用它的，用extern也不行。
+
+
+
+
